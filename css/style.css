@@ -1,0 +1,26 @@
+body{
+    display: grid;
+    margin: 0px;
+    padding: 0px; 
+    display:grid;
+    height:98vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:x-large;
+    grid-template-columns: 200;
+    grid-template-rows:10% 12% 70% 10%;
+    grid-template-areas:
+    'hd'
+    'nv'
+    'mn';
+}
+
+/* Sida 1 */
+
+
+/* Sida 2 */
+
+
+/* Sida 3 */
+
+
+/* Sida 4 */
