@@ -1,3 +1,4 @@
+/* Gemensamt */
 body{
     display: grid;
     margin: 0px;
@@ -7,7 +8,7 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:x-large;
     grid-template-columns: 100%;
-    grid-template-rows:10% 10% 60% 23%;
+    grid-template-rows:10% 10% 70% 22%;
     grid-template-areas:
     'hd'
     'nv'
@@ -15,40 +16,37 @@ body{
     'ft';
 }
 
-/* Gemensamt */
+
 header{
     display: grid;
     grid-area: hd;
+    padding: 5px;
 }
 
 nav{
     display: grid;
     grid-area: nv;
+    padding: 5px;
 }
 
 main{
     display: grid;
     grid-area: mn;
+    padding: 5px;
 }
 
 footer{
     display: flex;
     grid-area: ft;
     flex-direction: column;
-    padding: auto;
+    /* padding: auto; */
+    padding: 5px;
 }
 
 footer p{
     font-size: small;
+    padding: 5px;
 }
-
-h1{
-    display: flex;
-    font-size: large;
-    align-items: center;
-    justify-content: center;
-}
-
 
 .menu{
     height: 100vh;
@@ -61,6 +59,7 @@ h1{
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.5);
     z-index: 10px;
 }
+
 
 .menu-button{
     cursor: pointer;
@@ -89,8 +88,40 @@ h1{
     display: block;
 }
 
+h1{
+    display: flex;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+}
 
 
+/* Sida 1 */
+main .Personal{
+    display: flex;
+    height: 300px;
+    justify-content: center;
+
+}
+/* Sida 2 Söta katter */
+main .cats-part1{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Sida 3 - Mer söta katter*/
+
+
+/* Sida 4 - Om oss - lämna in din katt här*/
+ header h4{
+    display: flex;
+    font-size: medium;
+    align-items: center;
+    justify-content: center;
+ }
+
+/* Anpassat */
 @media(max-width: 600px){
     body{
         background-color: rgb(247, 216, 200);
@@ -106,6 +137,9 @@ h1{
     .menu{
         background: rgb(225, 166, 239);
     }
+    img{
+        height: 150px;
+    }
 }
 
 @media(min-width: 601px){
@@ -116,18 +150,7 @@ h1{
         font-size: 1.25 rem;
         line-height: 1;  
     }
+    img{
+        height: 300px;
+    }
 }
-/* Sida 1 */
-main .personal{
-    width: 10px;
-}
-/* Sida 2 Söta katter */
-
-
-/* Sida 3 - Mer söta katter*/
-
-
-/* Sida 4 - Om oss - lämna in din katt här*/
-
-
-/* Anpassat */
