@@ -253,7 +253,7 @@ main .cats-part2 .second-kitty img{
         height: 300px;
     }
 
-    /* Sida 1 */
+    /* Sida 1 
     main .personal-kort { 
         display: flex;
         height: 400px;
@@ -282,10 +282,10 @@ main .cats-part2 .second-kitty img{
         display: flex;
         height: 300px;
         justify-content: center;
-        /* border-top-left-radius: 15px; */
+        /* border-top-left-radius: 15px; 
         border-radius: 45px;
         border: 2px solid #000000;
         padding: 5px;
         margin:1fr;
-    }
-}
+    }*/
+} 
