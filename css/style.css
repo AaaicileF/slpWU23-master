@@ -154,9 +154,7 @@ main .cats-part1 .first-kitty img{
     display: flex;
     height: 300px;
     justify-content: center;
-    border-top-left-radius: 150px; 
     border-radius: 80px;
-    border: 1px dotted #000000;
     padding: 3px;
     margin:1fr;
 }
@@ -174,9 +172,7 @@ main .cats-part2 .second-kitty img{
     display: flex;
     height: 300px;
     justify-content: center;
-    border-top-left-radius: 150px; 
     border-radius: 80px;
-    border: 1px dotted #000000;
     padding: 3px;
     margin:1fr;
 }
