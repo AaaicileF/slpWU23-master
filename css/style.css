@@ -1,4 +1,10 @@
 /* Gemensamt */
+a{
+    text-decoration: none;
+    text-shadow: 2px #000000;
+    font-size: medium;
+    
+}
 body{
     display: grid;
     margin: 0px;
@@ -8,12 +14,15 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:x-large;
     grid-template-columns: 100%;
-    grid-template-rows:10% 10% 70% 22%;
+    grid-template-rows:10% 10% 60% 22%;
     grid-template-areas:
     'hd'
     'nv'
     'mn'
     'ft';
+}
+body,ul{
+    margin: 0;
 }
 
 
@@ -57,7 +66,7 @@ footer p{
     left: -90vw;
     transition: left 0.3s;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.5);
-    z-index: 10px;
+    z-index: 10;
 }
 
 
@@ -97,21 +106,80 @@ h1{
 
 
 /* Sida 1 */
-main .Personal{
+main .personal-kort {
+    display: flex;
+    height: 400px;
+    justify-content: baseline;
+    padding: 30px;
+    margin:1fr;
+    border: 2px solid #000000;
+
+}
+
+main .personal-kort .personal .personal-text{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+main .personal-kort .personal .personal-text p{
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+main .personal-kort .Personal img{
     display: flex;
     height: 300px;
     justify-content: center;
-
+    border-top-left-radius: 15px; 
+    border-radius: 45px;
+    border: 2px solid #000000;
+    padding: 5px;
+    margin:1fr;
 }
+
+
 /* Sida 2 Söta katter */
 main .cats-part1{
     display: flex;
     justify-content: center;
+    border-radius: 20px;;
+    padding: 10px;
+}
+
+main .cats-part1 .first-kitty img{
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    border-top-left-radius: 150px; 
+    border-radius: 80px;
+    border: 1px dotted #000000;
+    padding: 3px;
+    margin:1fr;
 }
 
 
 /* Sida 3 - Mer söta katter*/
+main .cats-part2{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;;
+    padding: 10px;
+}
 
+main .cats-part2 .second-kitty img{
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    border-top-left-radius: 150px; 
+    border-radius: 80px;
+    border: 1px dotted #000000;
+    padding: 3px;
+    margin:1fr;
+}
 
 /* Sida 4 - Om oss - lämna in din katt här*/
  header h4{
@@ -140,11 +208,46 @@ main .cats-part1{
     img{
         height: 150px;
     }
+    /* Sida 1 */
+    main .personal-kort {
+        display: flex;
+        height: 20vh;
+        flex-direction: column;
+        justify-content: baseline;
+        padding: 30px;
+        margin:1fr;
+        border: 2px solid #000000;
+    }
+    
+    main .personal-kort .personal .personal-text{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    
+    main .personal-kort .personal .personal-text p{
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    main .personal-kort .Personal img{
+        display: flex;
+        height: 300px;
+        justify-content: center;
+        border-top-left-radius: 15px; 
+        border-radius: 45px;
+        border: 2px solid #000000;
+        padding: 5px;
+        margin:1fr;
+    }
 }
 
-@media(min-width: 601px){
+@media(min-width: 700px){
     body{
         background-color:rgb(227, 183, 160);
+        height:97vh;
     }
     p{
         font-size: 1.25 rem;
@@ -152,5 +255,41 @@ main .cats-part1{
     }
     img{
         height: 300px;
+    }
+
+    /* Sida 1 */
+    main .personal-kort { 
+        display: flex;
+        height: 400px;
+        justify-content: baseline;
+        padding: 30px;
+        margin:1fr;
+        border: 2px solid #000000;
+    
+    }
+    
+    main .personal-kort .personal .personal-text{
+        display: flex;
+        width: 200px;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    
+    main .personal-kort .personal .personal-text p{
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    
+    main .personal-kort .Personal img{
+        display: flex;
+        height: 300px;
+        justify-content: center;
+        /* border-top-left-radius: 15px; */
+        border-radius: 45px;
+        border: 2px solid #000000;
+        padding: 5px;
+        margin:1fr;
     }
 }
