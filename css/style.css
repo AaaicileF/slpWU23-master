@@ -1,89 +1,98 @@
 /* Gemensamt */
-a{
+a {
     text-decoration: none;
     text-shadow: 2px #000000;
     font-size: medium;
-    
+
 }
-body{
+
+body {
     display: grid;
     margin: 0px;
-    padding: 0px; 
-    display:grid;
-    height:97vh;
+    padding: 20px;
+    display: grid;
+    min-height: 9vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size:x-large;
+    font-size: x-large;
     grid-template-columns: 100%;
-    grid-template-rows:10% 10% 60% 22%;
+    grid-template-rows: 10% 10% 60% 22%;
     grid-template-areas:
-    'hd'
-    'nv'
-    'mn'
-    'ft';
+        'hd'
+        'nv'
+        'mn'
+        'ft';
 }
-body,ul{
+
+body,
+ul {
     margin: 0;
 }
 
 
-header{
+header {
     display: grid;
     grid-area: hd;
     padding: 5px;
 }
 
-nav{
+nav {
     display: grid;
     grid-area: nv;
     padding: 5px;
 }
+nav ul li a:hover{
+    color: rgb(116, 52, 52);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(147, 93, 64),
+                0 0 5px rgb(147, 93, 64);    
+}
 
-main{
+main {
     display: grid;
     grid-area: mn;
     padding: 5px;
 }
 
-footer{
+footer {
     display: flex;
     grid-area: ft;
     flex-direction: column;
-    /* padding: auto; */
-    padding: 5px;
+    padding: 20px;
 }
 
-footer p{
+footer p {
     font-size: small;
-    padding: 5px;
+    padding: 0px;
+    /* margin: ; */
 }
 
-.menu{
+.menu {
     height: 100vh;
-    width: 80vw;
+    width: 20vw;
     background: rgb(246, 171, 208);
     position: fixed;
     top: 0;
-    left: -90vw;
+    left: -50vw;
     transition: left 0.3s;
-    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.5);
-    z-index: 10;
+    box-shadow: 10px 0px 21px -10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 
-.menu-button{
+.menu-button {
     cursor: pointer;
     display: inline;
 }
 
-.menu-button i.material-icons{
+.menu-button i.material-icons {
     font-size: 2.5rem;
 }
 
-.show{
+.show {
     left: 0;
 }
 
-.fade-layer{
+.fade-layer {
     position: fixed;
     top: 0;
     left: 0;
@@ -93,13 +102,13 @@ footer p{
     z-index: 5;
 }
 
-.fade-layer.visible{
+.fade-layer.visible {
     display: block;
 }
 
-h1{
+h1 {
     display: flex;
-    font-size: large;
+    font-size: x-large;
     align-items: center;
     justify-content: center;
 }
@@ -108,102 +117,116 @@ h1{
 /* Sida 1 */
 main .personal-kort {
     display: flex;
-    height: 400px;
-    justify-content: baseline;
-    padding: 30px;
-    margin:1fr;
+    height: 350px;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 1fr;
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
     border: 2px solid #000000;
 
 }
 
-main .personal-kort .personal .personal-text{
+main .personal-kort .personal .personal-text {
     display: flex;
     width: 200px;
     justify-content: space-between;
-    padding: 20px;
+    padding: 5px;
 }
 
-main .personal-kort .personal .personal-text p{
+main .personal-kort .personal .personal-text p {
     display: flex;
     width: 100px;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
+    padding: 10px;
+    font-size: medium;
 }
 
-main .personal-kort .Personal img{
+main .personal-kort .Personal img {
     display: flex;
     height: 300px;
     justify-content: center;
-    border-top-left-radius: 15px; 
-    border-radius: 45px;
-    border: 2px solid #000000;
-    padding: 5px;
-    margin:1fr;
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    /* border-radius: 45px; */
+    padding: 10px;
+    margin: 1fr;
 }
 
 
 /* Sida 2 Söta katter */
-main .cats-part1{
+main .cats-part1 {
     display: flex;
     justify-content: center;
-    border-radius: 20px;;
+    border-radius: 20px;
+    ;
     padding: 10px;
 }
 
-main .cats-part1 .first-kitty img{
+main .cats-part1 .first-kitty img {
     display: flex;
     height: 300px;
     justify-content: center;
     border-radius: 80px;
     padding: 3px;
-    margin:1fr;
+    margin: 1fr;
 }
 
 
 /* Sida 3 - Mer söta katter*/
-main .cats-part2{
+main .cats-part2 {
     display: flex;
     justify-content: center;
-    border-radius: 20px;;
+    border-radius: 20px;
     padding: 10px;
 }
 
-main .cats-part2 .second-kitty img{
+main .cats-part2 .second-kitty img {
     display: flex;
     height: 300px;
     justify-content: center;
     border-radius: 80px;
     padding: 3px;
-    margin:1fr;
+    margin: 1fr;
 }
 
 /* Sida 4 - Om oss - lämna in din katt här*/
- header h4{
+header h4 {
     display: flex;
     font-size: medium;
     align-items: center;
     justify-content: center;
- }
+}
 
 /* Anpassat */
-@media(max-width: 600px){
-    body{
+@media(max-width: 600px) {
+    body {
+        height: 240vh;
         background-color: rgb(247, 216, 200);
     }
-    p{
-       font-size: 1.25 rem; 
-       color: black;
-       
+
+    p {
+        font-size: 1.25 rem;
+        color: black;
     }
-    .material-icons{
-        visibility:visible;
+
+    .material-icons {
+        visibility: visible;
     }
-    .menu{
+
+    .menu {
         background: rgb(225, 166, 239);
     }
-    img{
-        height: 150px;
+
+    img {
+        height: 20fr;
     }
+
+    
+    footer{
+        flex-direction: column;
+    }
+
     /* Sida 1 */
     main .personal-kort {
         display: flex;
@@ -211,81 +234,98 @@ main .cats-part2 .second-kitty img{
         flex-direction: column;
         justify-content: baseline;
         padding: 30px;
-        margin:1fr;
+        margin: 1fr;
         border: 2px solid #000000;
     }
-    
-    main .personal-kort .personal .personal-text{
+
+    main .personal-kort .personal .personal-text {
         display: flex;
         width: 50%;
         justify-content: space-between;
         padding: 20px;
+        flex-direction: column;
     }
-    
-    main .personal-kort .personal .personal-text p{
+
+    main .personal-kort .personal .personal-text p {
         display: flex;
         width: 100px;
         justify-content: space-between;
         padding: 20px;
+        flex-direction: column;
     }
-    main .personal-kort .Personal img{
+
+    main .personal-kort .Personal img {
         display: flex;
         height: 300px;
         justify-content: center;
-        border-top-left-radius: 15px; 
+        border-top-left-radius: 15px;
         border-radius: 45px;
         border: 2px solid #000000;
         padding: 5px;
-        margin:1fr;
+        margin: 1fr;
+        flex-direction: column;
+    }
+
+    /* Sida 2 Söta katter */
+    main .cats-part1 {
+        display: flex;
+        justify-content: center;
+        border-radius: 20px;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    main .cats-part1 .first-kitty img {
+        display: flex;
+        height: 300px;
+        justify-content: center;
+        border-radius: 80px;
+        padding: 3px;
+        margin: 1fr;
+        flex-direction: column;
+    }
+
+    /* Sida 3 - Mer söta katter*/
+    main .cats-part2 {
+        display: flex;
+        justify-content: center;
+        border-radius: 20px;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    main .cats-part2 .second-kitty img {
+        display: flex;
+        height: 300px;
+        justify-content: center;
+        border-radius: 80px;
+        flex-direction: column;
+        padding: 3px;
+        margin: 1fr;
+    }
+
+    /* Sida 4 - Om oss - lämna in din katt här*/
+    header h4 {
+        display: flex;
+        font-size: medium;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 }
 
-@media(min-width: 700px){
-    body{
-        background-color:rgb(227, 183, 160);
-        height:97vh;
-    }
-    p{
-        font-size: 1.25 rem;
-        line-height: 1;  
-    }
-    img{
-        height: 300px;
+@media(min-width: 700px) {
+    body {
+        background-color: rgb(227, 183, 160);
+        height: 97vh;
     }
 
-    /* Sida 1 
-    main .personal-kort { 
-        display: flex;
-        height: 400px;
-        justify-content: baseline;
-        padding: 30px;
-        margin:1fr;
-        border: 2px solid #000000;
-    
+    p {
+        font-size: 1.25 rem;
+        line-height: 1;
     }
-    
-    main .personal-kort .personal .personal-text{
-        display: flex;
-        width: 200px;
-        justify-content: space-between;
-        padding: 20px;
-    }
-    
-    main .personal-kort .personal .personal-text p{
-        display: flex;
-        width: 100px;
-        justify-content: space-between;
-        padding: 20px;
-    }
-    
-    main .personal-kort .Personal img{
-        display: flex;
+
+    img {
         height: 300px;
-        justify-content: center;
-        /* border-top-left-radius: 15px; 
-        border-radius: 45px;
-        border: 2px solid #000000;
-        padding: 5px;
-        margin:1fr;
-    }*/
-} 
+    }
+}
