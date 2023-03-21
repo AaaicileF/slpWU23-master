@@ -40,6 +40,7 @@ nav {
     grid-area: nv;
     padding: 5px;
 }
+
 nav ul li a:hover{
     color: rgb(116, 52, 52);
     border-radius: 5px;
@@ -58,12 +59,14 @@ footer {
     grid-area: ft;
     flex-direction: column;
     padding: 20px;
+    background-color: rgb(179, 128, 100);
 }
 
 footer p {
     font-size: small;
     padding: 0px;
     /* margin: ; */
+    
 }
 
 .menu {
@@ -73,9 +76,11 @@ footer p {
     position: fixed;
     top: 0;
     left: -50vw;
+    /* left:-90vw alt. */
     transition: left 0.3s;
     box-shadow: 10px 0px 21px -10px rgba(0, 0, 0, 0.5);
     z-index: 1;
+    /* z-index: 10 */
 }
 
 
@@ -140,7 +145,7 @@ main .personal-kort .personal .personal-text p {
     justify-content: center;
     padding: 10px;
     font-size: medium;
-}
+} 
 
 main .personal-kort .Personal img {
     display: flex;
@@ -159,7 +164,6 @@ main .cats-part1 {
     display: flex;
     justify-content: center;
     border-radius: 20px;
-    ;
     padding: 10px;
 }
 
@@ -196,6 +200,28 @@ header h4 {
     font-size: medium;
     align-items: center;
     justify-content: center;
+}
+
+main .form-list{
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    padding:1vw;  
+    margin: 0 auto;
+    width: 400px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid #000000;
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+    background-color: rgb(246, 171, 208);
+}
+
+main .form-list div{
+    padding:2vw;
+}
+
+.textmsg{
+    font-size: 12px;
 }
 
 /* Anpassat */

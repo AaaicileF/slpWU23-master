@@ -36,9 +36,24 @@
     <script src="js/allt.js"></script>
 
     <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nihil voluptate minima, dicta neque, voluptatem consequatur laudantium quos cum distinctio excepturi, itaque quisquam numquam veniam exercitationem est ab repellendus aut.</p>
+        <form action="/my-handling-form-page" method="post">
+            <section class="form-list">
+              <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" />
+              </div>
+              <div>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="user_email" />
+              </div>
+              <div>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message"></textarea>
+                <label class="textmsg" for="msg2">Exempel: Kattis, hona, 11år, behöver stanna från den 18/4 till 17/4</label>
+              </div>
+            </section>
+          </form>
     </main>
-    
 
 <footer> 
     <p>Plats: Kattparadiset</p>      
