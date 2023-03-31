@@ -8,17 +8,16 @@ a {
 body {
     display: grid;
     margin: 0px;
-    padding: 20px;
+    padding: 10px;
     display: grid;
     min-height: 9vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     grid-template-columns: 100%;
-    grid-template-rows: 10% 10% 60% 22%;
+    grid-template-rows: 10% 10% 60%;
     grid-template-areas:
         'hd'
         'nv'
-        'mn'
-        'ft';
+        'mn';
 }
 
 body,
@@ -90,32 +89,40 @@ nav ul li a:hover {
 /* Gör så att man kan klicka utanför rosa området men 
 förhindrar att man kan klicka på länkarna */
 .fade-layer.visible {
-    display:contents;
+    display: contents;
 }
 
 /* Nav End -------------------------------------------- */
-
 main {
+    grid-area: mn;
+    padding: 5px;
+}
+
+main .p4 {
     display: grid;
     grid-area: mn;
     padding: 5px;
-    /* background-image: url(/img/Multi-cat.jpg); */
-    /* background-size: contain; */
+    background-image: url(/img/Multi-cat.jpg);
+    background-size: contain;
 }
 
 
 footer {
     display: flex;
-    grid-area: ft;
+    position:relative;
+    bottom: -50px;
     flex-direction: column;
     padding: 20px;
+    margin: 9fr;
     background-color: rgb(179, 128, 100);
+    width: 100%;
 }
 
 footer p {
     font-size: small;
-    padding: 0px;
-    /* margin: ; */
+    align-items: flex-start;
+    padding: 2px;
+    margin: 1fr;
 
 }
 
@@ -127,7 +134,7 @@ h1 {
 }
 
 
-/* Sida 1 */
+/* Sida 1 __________________________________________*/
 main .personal-kort {
     display: flex;
     height: 350px;
@@ -185,24 +192,161 @@ main .cats-part1 .first-kitty img {
     margin: 1fr;
 }
 
-
-/* Sida 3 - Mer söta katter*/
-main .cats-part2 {
+.cats-part1 .first-kitty p{
     display: flex;
+    justify-items: center;
+}
+
+/* Sida 3 - Mer söta katter _________________*/
+
+main .cats-part2 {
+    /* justify-content: center;
+    align-items: center; */
+    display: grid;
+    display: grid;
+    grid-template-areas:
+        'c1 c2 c3';
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 500px;
+    padding: 10px;
+    margin: 10px;
+    width: 700px;
+
+}
+
+.card1 {
+    justify-content: center;
+    align-items: center;
+    grid-area: c1;
+    grid-template-areas:
+        'dv'
+        'd2';
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 170px 150px;
+    padding: 2px;
+    margin: 15px;
+    height: 400px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgb(246, 171, 208);
+}
+
+.card2 {
+    justify-content: center;
     justify-content: baseline;
     align-items: center;
-    border-radius: 20px;
-    padding: 20px;
+    grid-area: c2;
+    grid-template-areas:
+        'd2'
+        'dv';
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 200px 150px;
+    padding: 10px;
+    margin: 15px;
+    height: 400px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgb(246, 171, 208);
 }
 
-main .cats-part2 .second-kitty img {
-    display: flex;
-    height: 300px;
+.card3 {
     justify-content: center;
-    border-radius: 80px;
-    padding: 3px;
-    margin: 1fr;
+    justify-content: baseline;
+    align-items: center;
+    grid-area: c3;
+    grid-template-areas:
+        'dv'
+        'd2';
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 150px 150px;
+    padding: 10px;
+    margin: 15px;
+    height: 400px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgb(246, 171, 208);
 }
+
+.card1 .dagbok-kattis {
+    grid-area: d2;
+    display: flex;
+    font-size: 15px;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    height: 200px;
+    box-sizing: border-box;
+    justify-content:flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.card2 .dagbok-kattis {
+    grid-area: d2;
+    display: flex;
+    place-content: center;
+    justify-self: flex-start;
+    font-size: 15px;
+    padding: 2px;
+    height: 200px;
+    box-sizing: border-box;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.card3 .dagbok-kattis {
+    grid-area: d2;
+    display: flex;
+    font-size: 15px;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    height: 400px;
+    box-sizing: border-box;
+    justify-content:flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+ .second-kitty img {
+    grid-area: dv;
+    display: flex;
+    place-content: center;
+    align-items: baseline;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 15px;
+    padding: 10px;
+}
+
+.second-kitty .card2 img {
+    grid-area: dv;
+    display: flex;
+    /* place-content: center; */
+    align-items:flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-image: contain;
+    height: 200px;
+}
+
+main .cats-part2 .second-kitty img{
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: baseline;
+    border-radius: 40px;
+    flex-direction: column;
+    padding: 30px;
+    margin: 1fr;
+} 
+
+
+
 
 /* Sida 4 - Om oss - lämna in din katt här*/
 header h4 {
@@ -212,7 +356,7 @@ header h4 {
     justify-content: center;
 }
 
-.p4{
+.p4 {
     background-image: url(/img/Multi-cat.jpg);
     background-size: contain;
     border-top-right-radius: 45px;
@@ -258,7 +402,7 @@ label {
 
 textarea {
     /* Align multiline text fields with their labels */
-    vertical-align:top;
+    vertical-align: top;
 
     /* Provide space to type some text */
     height: 5em;
@@ -287,7 +431,7 @@ button:focus {
 }
 
 
-/* Anpassat */
+/*______________________ Anpassat_______________________________________*/
 @media(max-width: 600px) {
     body {
         height: 240vh;
@@ -304,14 +448,14 @@ button:focus {
     }
 
     .menu {
-        width: 50vw;
+        width: 40vw;
         background: rgb(225, 166, 239);
         position: fixed;
         top: 0;
         left: vw;
         transition: left 0.9s;
         box-shadow: 10px 0px 21px -10px rgba(0, 0, 0, 0.5);
-        z-index: 1;
+        z-index: 10;
     }
 
     img {
@@ -320,6 +464,9 @@ button:focus {
 
     footer {
         flex-direction: column;
+        height: 100px;
+        margin: 1px;
+        /* padding: 1px; */
     }
 
     /* Sida 1 */
@@ -388,14 +535,48 @@ button:focus {
         border-radius: 20px;
         flex-direction: column;
         padding: 10px;
+        width: auto;
     }
 
-    main .cats-part2 .second-kitty img {
+    main .cats-part2 .card1{
+        display: flex;
+        justify-content: flex-start;
+        padding: 9px;
+    }
+
+    main .cats-part2 .card2{
+        display: flex;
+        height: 400px;
+        padding: 9px;
+        justify-content:flex-start;
+        flex-direction: column;
+    }
+
+    main .cats-part2 .card3{
+        display: flex;
+        justify-content: flex-start;
+        padding: 9px;
+
+    }
+
+    main .cats-part2 .second-kitty{
         display: flex;
         height: 300px;
+        width: 1fr;
+        justify-content: flex-start;
+        /* border-radius: 80px; */
+        flex-direction: column;
+        padding: 3px;
+        /* margin: 1fr; */
+    }
+
+    main .cats-part2 .second-kitty img{
+        display: flex;
+        height: 220px;
+        /* width: fr; */
         justify-content: center;
         border-radius: 80px;
-        flex-direction: column;
+        flex-direction:column;
         padding: 3px;
         margin: 1fr;
     }
@@ -408,15 +589,24 @@ button:focus {
         justify-content: center;
         flex-direction: column;
     }
-
     .p4{
         background-image: none;
         border: 0px dotted #000000;
     }
     
+    footer {
+        display: flex;
+        position:fixed;
+        bottom: -1px;
+        flex-direction: column;
+        padding: 20px;
+        margin: 9fr;
+        background-color: rgb(179, 128, 100);
+        width: 100%;
+    }
 }
 
-@media(min-width: 700px) {
+@media(min-width: 601px) {
     body {
         background-color: rgb(227, 183, 160);
         height: 97vh;
