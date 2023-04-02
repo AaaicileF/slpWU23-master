@@ -13,13 +13,5 @@ function showMenu(){
     layer.classList.toggle("visible");   
 }
 
-function showMessage(){
-    let message = document.querySelector("main.button");
-    message.classList.toggle("visible");
-
-    // let layer = document.querySelector(".fade-layer");
-    // layer.classList.toggle("visible");   
-}
-
 
 
